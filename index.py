@@ -9,9 +9,8 @@ def moveZeroes(nums):
     len_no0 = len(nums)-zeroes-1
     for i in range(len_no0):
         if(nums[i]>nums[i+1]):
-            temp=nums[i]
-            nums[i]=nums[i+1]
-            nums[i+1]=temp
+            nums[i], nums[i+1] = nums[i+1], nums[i]
+            
 
     return nums
 
